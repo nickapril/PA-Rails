@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :lessons
+  resources :instructors
+  resources :subjects
   resources :users
 
   get 'users/index'
@@ -12,7 +15,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  get '/courses', 		to: 'courses#show'
+  get '/courses', 		to: 'lessons#show'
   get '/instructors', 	to: 'instructors#show'
   get '/subjects', 		to: 'subjects#show'
   #post '/courses', 	to: 'courses#new'

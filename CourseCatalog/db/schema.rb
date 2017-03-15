@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315001745) do
+ActiveRecord::Schema.define(version: 20170315023826) do
+
+  create_table "instructors", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "official_id"
+    t.string   "comment"
+    t.string   "email"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "official_id"
+    t.string   "comment"
+    t.integer  "term"
+    t.string   "code"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name"
+    t.date     "date"
+    t.integer  "official_id"
+    t.integer  "term"
+    t.string   "abbreviation"
+    t.string   "comment"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
