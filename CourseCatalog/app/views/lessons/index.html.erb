@@ -1,16 +1,17 @@
+<%= render 'layouts/header' %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Lessons</h1>
+<h1>Courses</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Official</th>
-      <th>Comment</th>
+      <th>ID&#160;</th>
+      <th>&#160;Comment</th>
       <th>Term</th>
-      <th>Code</th>
-      <th>Subjects</th>
+      <th>&#160;Code</th>
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
@@ -24,11 +25,7 @@
         <td><%= lesson.comment %></td>
         <td><%= lesson.term %></td>
         <td><%= lesson.code %></td>
-        <td><%= lesson.subjects %></td>
         <td><%= lesson.description %></td>
-        <td><%= link_to 'Show', lesson %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

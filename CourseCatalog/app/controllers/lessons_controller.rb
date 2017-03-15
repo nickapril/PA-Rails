@@ -37,10 +37,6 @@ class LessonsController < ApplicationController
     end
   end
 
-  def comment
-    @lesson.comment
-  end
-
   # PATCH/PUT /lessons/1
   # PATCH/PUT /lessons/1.json
   def update

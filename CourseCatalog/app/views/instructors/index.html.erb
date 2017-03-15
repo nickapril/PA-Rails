@@ -1,3 +1,4 @@
+<%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
 
 <h1>Instructors</h1>
@@ -22,9 +23,6 @@
         <td><%= instructor.official_id %></td>
         <td><%= instructor.comment %></td>
         <td><%= instructor.email %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
